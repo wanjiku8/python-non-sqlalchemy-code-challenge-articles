@@ -1,8 +1,11 @@
-class Article:
-    def __init__(self, author, magazine, title):
+def __init__(self, author, magazine, title):
         self.author = author
-        self.magazine = magazine
+        self.magazine = magazine  # ✅ Store it as an attribute
         self.title = title
+
+        # Ensure the magazine is linked to this article
+        magazine.add_article(self)
+
         
 class Author:
     def __init__(self, name):
